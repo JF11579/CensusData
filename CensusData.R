@@ -91,7 +91,7 @@ View(Latino_NYS_ConDist_Age_Dist)
 
 # The output is just what one would hope for.
 #Each row is the congressional district and each column is the age bracket.
-# To decod teh age brackets return to the ACS5 object, enter Latino, and scroll down
+# To decode the age brackets return to the ACS5 object, enter Latino, and scroll down
 #until one gets to B010001I
 # B01001I_002 is total male population.
 #  B01001I_003Estimate!!Total!!Male!!Under 5 years
@@ -99,12 +99,3 @@ View(Latino_NYS_ConDist_Age_Dist)
 
 #And so on .  How marvelously specif is this?
 
-#############
-Latino_Ages_2017_NY<- get_acs(geography = "congressional district", variables = "B01001I_002",
-                             year = 2017, state = "NY", geometry = FALSE)
-dim(Latino_Ages_2017_US)
-
-
-Latino_Ages_2017_NY_wide<- get_acs(geography = "congressional district",state = "NY",
-                             table="B01001I", output = "wide",survey = "acs5")
-View(Latino_Ages_2017_NY_wide)
